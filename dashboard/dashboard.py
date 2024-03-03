@@ -9,8 +9,7 @@ sns.set(style='dark')
 st.set_page_config(layout="wide")
 
 # load dataset
-df_path = "https://github.com/tmrafif/data-analysis-project/blob/8bb4adfc3acd5db9a51500d1bcdcf63752eaaf2e/dashboard/main_data.csv"
-main_df = pd.read_csv(df_path)
+main_df = pd.read_csv("dashboard/main_data.csv")
 
 # datetime columns
 datetime_columns = ['order_purchase_timestamp', 'order_approved_at', 'order_delivered_carrier_date',
