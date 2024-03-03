@@ -9,7 +9,7 @@ sns.set(style='dark')
 st.set_page_config(layout="wide")
 
 # load dataset
-main_df = pd.read_csv('dashboard\main_data.csv')
+main_df = pd.read_csv('main_data.csv')
 
 # datetime columns
 datetime_columns = ['order_purchase_timestamp', 'order_approved_at', 'order_delivered_carrier_date',
