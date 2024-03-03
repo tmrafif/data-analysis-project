@@ -6,7 +6,6 @@ import streamlit as st
 from tools import metric_graph as mg
 from babel.numbers import format_currency
 sns.set(style='dark')
-st.set_page_config(layout="wide")
 
 # load dataset
 
@@ -28,8 +27,11 @@ seller_bycity_df = mg.seller_group_df(main_df, groupby='seller_city')
 seller_bystate_df = mg.seller_group_df(main_df, groupby='seller_state')
 rfm_df = mg.create_rfm_df(main_df)
 
+# Title
+st.title("Brazilian E-Commerce Dashboard")
+
 # Daily Orders
-st.subheader('Daily Orders')
+st.header('Daily Orders')
 
 col1, col2 = st.columns(2)
 
