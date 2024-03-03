@@ -9,7 +9,11 @@ sns.set(style='dark')
 st.set_page_config(layout="wide")
 
 # load dataset
+<<<<<<< HEAD
 main_df = pd.read_csv("dashboard/main_data.csv")
+=======
+main_df = pd.read_csv('dashboard/main_data.csv')
+>>>>>>> a7342af (updated)
 
 # datetime columns
 datetime_columns = ['order_purchase_timestamp', 'order_approved_at', 'order_delivered_carrier_date',
@@ -100,3 +104,5 @@ with col3:
     st.metric("Average Monetary", value=avg_frequency)
     st.subheader('By Monetary (R$)')
     st.pyplot(mg.create_rfm_graph(rfm_df, by='monetary'))
+
+st.caption('Copyright (c) T. M. Rafif Alwafi 2023')
